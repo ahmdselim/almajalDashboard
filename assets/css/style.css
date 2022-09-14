@@ -15734,9 +15734,9 @@ fieldset:disabled .swal2-modal .swal2-buttonswrapper .swal2-styled,
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #cddc3952 !important;
+  background-color: #2f313c !important;
   background-clip: border-box;
-  border: 1px solid #cddc3952;
+  border: 1px solid #2f313c;
   border-radius: 0.5rem !important;
 }
 .card > hr {

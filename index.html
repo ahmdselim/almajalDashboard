@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -84,7 +84,9 @@
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title" lang="en" data-i18n="dashboard"
+                >Dashboard</span
+              >
             </a>
           </li>
         </ul>
@@ -94,7 +96,10 @@
         <!-- partial:partials/_navbar.html -->
         <nav
           class="navbar p-0 fixed-top d-flex flex-row"
-          style="background: linear-gradient(to bottom, #6eb43e, #4f832d)"
+          style="
+            background: linear-gradient(to bottom, #6eb43e, #4f832d);
+            /* width: 100%; */
+          "
         >
           <div
             class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center"
@@ -118,7 +123,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Search products"
+                    placeholder="Search"
                   />
                 </form>
               </li>
@@ -126,7 +131,21 @@
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item nav-settings d-none d-lg-block">
                 <a class="nav-link" href="#">
-                  <i class="mdi mdi-view-grid"></i>
+                  <select
+                    style="
+                      padding: 5px;
+                      border-radius: 5px;
+                      border: 1px solid #ddd;
+                      width: 200px;
+                    "
+                  >
+                    <option data-i18n="chooseYouLanguage">
+                      Choose You Language
+                    </option>
+                    <option value="en" data-i18n="english">English</option>
+                    <option value="ar" data-i18n="arabic">Arabic</option>
+                    <option value="fr" data-i18n="french">French</option>
+                  </select>
                 </a>
               </li>
 
@@ -163,7 +182,9 @@
                       </div>
                     </div>
                     <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Log out</p>
+                      <p class="preview-subject mb-1" data-i18n="LogOut">
+                        Log out
+                      </p>
                     </div>
                   </a>
                 </div>
@@ -202,7 +223,10 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">
+                    <h6
+                      class="text-muted font-weight-normal"
+                      data-i18n="PotentialGrowth"
+                    >
                       Potential growth
                     </h6>
                   </div>
@@ -228,7 +252,10 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">
+                    <h6
+                      class="text-muted font-weight-normal"
+                      data-i18n="RevenueCurrent"
+                    >
                       Revenue current
                     </h6>
                   </div>
@@ -254,7 +281,12 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Daily Income</h6>
+                    <h6
+                      class="text-muted font-weight-normal"
+                      data-i18n="DailyIncome"
+                    >
+                      Daily Income
+                    </h6>
                   </div>
                 </div>
               </div>
@@ -278,7 +310,10 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">
+                    <h6
+                      class="text-muted font-weight-normal"
+                      data-i18n="ExpenseCurrent"
+                    >
                       Expense current
                     </h6>
                   </div>
@@ -290,7 +325,7 @@
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Line chart</h4>
+                    <h4 class="card-title" data-i18n="LineChart">Line chart</h4>
                     <canvas id="lineChart" style="height: 250px"></canvas>
                   </div>
                 </div>
@@ -298,7 +333,7 @@
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Bar chart</h4>
+                    <h4 class="card-title" data-i18n="BarChart">Bar chart</h4>
                     <canvas id="barChart" style="height: 230px"></canvas>
                   </div>
                 </div>
@@ -309,7 +344,9 @@
               <div class="col-6">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Visitors by Countries</h4>
+                    <h4 class="card-title" data-i18n="VisitorsByCountries">
+                      Visitors by Countries
+                    </h4>
                     <div class="row">
                       <div class="col-md-12">
                         <div id="audience-map" class="vector-map"></div>
@@ -321,7 +358,9 @@
               <div class="col-6 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Order Status</h4>
+                    <h4 class="card-title" data-i18n="OrderStatus">
+                      Order Status
+                    </h4>
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
@@ -524,7 +563,7 @@
     <!-- Plugin js for this page -->
     <script src="assets/js/chart.js"></script>
     <script src="assets/vendors/chart.js/Chart.min.js"></script>
-
+    <script src="assets/js/changeLanguage.js"></script>
     <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
     <script src="assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
     <script src="assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
